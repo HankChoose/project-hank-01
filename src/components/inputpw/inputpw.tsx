@@ -11,8 +11,6 @@ export interface InputpwProps {
  */
 export const Inputpw = ({ className }: InputpwProps) => {
     return (
-        <div className={classNames(styles.root, className)}>
-            <input type="password" />
-        </div>
+        <input type="password" className={styles.inputpw} />
     );
 };

@@ -67,4 +67,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+.label {
+  text-align: start;
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 0px;
+  margin-bottom: 0.5em;
 }

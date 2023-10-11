@@ -1,14 +1,56 @@
+import classNames from 'classnames';
+import styles from './input.module.scss';
+
+export interface InputProps {
+    className?: string;
+    id?: string;
+    name?: string;
+}
+
+/**
+ * This component was created using Codux's Default new component template.
+ * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
+ */
+
+export const Input = ({ className, id, name }: InputProps) => {
+    return (
+        <div className={classNames(styles.root, className)}>
+            <input id={id} name={name} />
+        </div>
+    );
+};
+
+import classNames from 'classnames';
+import styles from './label.module.scss';
+
+export interface LabelProps {
+    className?: string;
+    children?:JSX.Element | Array<JSX.Element|string> | string;
+    htmlFor?:string;
+}
+
+/**
+ * This component was created using Codux's Default new component template.
+ * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
+ */
+export const Label = ({ className, children, htmlFor  }: LabelProps) => {
+    return (
+        <div className={classNames(styles.root, className)}>
+            <label htmlFor={htmlFor}>{ children }</label>
+        </div>
+    );
+};
+
+
+
 import React, { useState } from 'react';
 import styles from './App.module.scss';
+import { Input } from './components/input/input';
+import Input_module from './components/input/input.module.scss';
 import { Label } from './components/label/label';
 import { Button } from './components/button/button';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { Link } from './components/link/link';
-import { Inputpw } from './components/inputpw/inputpw';
-import Input_module from './components/input/input.module.scss';
-import Classnames from 'classnames';
-import { Input } from './components/input/input';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -45,16 +87,19 @@ function App() {
     };
     return (
         <div className={styles.App}>
-            <h1>Sign in to Zhiyouyuec</h1>
+            <h1>Sign in</h1>
             <form onSubmit={handleOnSubmit}>
                 <Label htmlFor={'email'}>Email</Label>
-                <Input className={Classnames(Input_module.input)} id={''} name={''} />
+                <Input className={Input_module.input} id={'email'} name="email" />
                 <Label htmlFor={'password'}>Password</Label>
-                <Inputpw />
-                <Button>Sign in</Button>No account yet?<Link>Register</Link>
+                <input type="password" id={'password'} name="password" />
+                <Button>Sign in</Button>
             </form>
         </div>
     );
 }
 
 export default App;
+
+No account yet?Register
+Already have an account?Sign in

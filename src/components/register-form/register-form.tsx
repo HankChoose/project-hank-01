@@ -1,8 +1,11 @@
 import classNames from 'classnames';
 import styles from './register-form.module.scss';
-import { Input } from '../input/input';
 import Input_module from '../input/input.module.scss';
+import { Input } from '../input/input';
+import { Label } from '../label/label';
 import { Inputpw } from '../inputpw/inputpw';
+import { Button } from '../button/button';
+import { Link } from '../link/link';
 
 export interface RegisterFormProps {
     className?: string;
@@ -16,10 +19,19 @@ export interface RegisterFormProps {
 export const RegisterForm = ({ className }: RegisterFormProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            RegisterForm
-            <Input className={Input_module.input} />
-            <Input className={Input_module.input} />
+            <h1>Register</h1>
+            <form />
+            <Label>Email</Label>
+            <Input className={classNames(Input_module.input)} id={''} name={''} />
+            <Label>Password</Label>
             <Inputpw />
+            <Label>Password again</Label>
+            <Inputpw />
+            <Button>Register</Button>
+            <Button>Cancel</Button>
+            <div>
+                Already have an account?<Link>Sign in</Link>
+            </div>
         </div>
     );
 };

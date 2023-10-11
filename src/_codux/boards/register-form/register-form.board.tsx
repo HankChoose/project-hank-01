@@ -5,4 +5,7 @@ export default createBoard({
     name: 'RegisterForm',
     Board: () => <RegisterForm />,
     isSnippet: true,
+    environmentProps: {
+        canvasWidth: 585,
+    },
 });
