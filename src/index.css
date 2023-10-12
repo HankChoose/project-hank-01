@@ -70,6 +70,9 @@ button:focus-visible {
 
   * {
     box-sizing: border-box;
+    width: auto;
+    text-align: center;
+    direction: ltr;
   }
 }
 .label {

@@ -1,20 +1,15 @@
 import classNames from 'classnames';
-import styles from './label.module.scss';
+import styles from './from-row.module.scss';
 
-export interface LabelProps {
+export interface FromRowProps {
     className?: string;
     children?: JSX.Element | Array<JSX.Element | string> | string;
-    htmlFor?: string;
 }
 
 /**
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
-export const Label = ({ className, children, htmlFor }: LabelProps) => {
-    return (
-        <label htmlFor={htmlFor} className={classNames('label', styles.label)}>
-            {children}
-        </label>
-    );
+export const FromRow = ({ className, children }: FromRowProps) => {
+    return <div className={styles.root}>{children}</div>;
 };
