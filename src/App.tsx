@@ -50,34 +50,40 @@ function App() {
         <div className={styles.App}>
             <h1>Sign in to Zhiyouyuec</h1>
             <form onSubmit={handleOnSubmit}>
-            <table width="325" height="92" border="0" align="center">
+
+            <table width="200" border="0" align="center">
                 <tbody>
                     <tr>
-                    <th scope="col">&nbsp;</th>
-                    <th colspan="2" scope="col">  <FromRow>
-                        <Label htmlFor={'email'}>Email</Label>
-                        <Input className={Classnames(Input_module.input)} id={''} name={''} />
+                    <th scope="col" align="left"> <Label htmlFor={'email'}>Email</Label></th>
+                    <th align="right" scope="col"><FromRow>Need an account?</FromRow></th>
+                    <th align="right" scope="col"><FromRow><Link>Sign up</Link></FromRow></th>
+                    </tr>
+                    <tr>
+                    <th colspan="3" scope="row">
+                        <FromRow><Input className={Classnames(Input_module.input)} id={''} name={''} />
                         </FromRow></th>
-                    <th scope="col">&nbsp;</th>
                     </tr>
                     <tr>
-                    <th scope="row">&nbsp;</th>
-                    <td colspan="2"> <FromRow> <Label htmlFor={'password'}>Password</Label>
-                            <Inputpw />
-                        </FromRow></td>
-                    <td>&nbsp;</td>
+                    <th colspan="3" scope="row">&nbsp;</th>
                     </tr>
+                    <tr>
+                    <th scope="col" align="left"> <FromRow> <Label htmlFor={'password'}>Password</Label>
+                        </FromRow></th>
+                    <th align="right" scope="col"></th>
+                    <th align="right" scope="col"><FromRow><Link>Retrieve password</Link></FromRow></th>
 
-                    <tr>
-                    <th scope="row">&nbsp;</th>
-                    <td colspan="2"> <FromRow><Button>Sign in</Button></FromRow></td>
-                    <td>&nbsp;</td>
                     </tr>
                     <tr>
-                    <th scope="row">&nbsp;</th>
-                    <td><FromRow>No account yet?</FromRow></td>
-                    <td><FromRow><Link>Register</Link></FromRow></td>
-                    <td>&nbsp;</td>
+                    <th colspan="3" scope="row"> <Inputpw /></th>
+                    </tr>
+                    <tr>
+                    <th colspan="3" scope="row">&nbsp;</th>
+                    </tr>
+                    <tr>
+                    <th colspan="3" scope="row"><FromRow><Button>Sign in</Button></FromRow></th>
+                    </tr>
+                    <tr>
+                    <th colspan="3" scope="row">&nbsp;</th>
                     </tr>
                 </tbody>
                 </table>

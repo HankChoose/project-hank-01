@@ -1,0 +1,17 @@
+[  
+    {
+        "name": "React-Icons",
+        "components": [
+            {
+                "filePath": "React-Icons\rx",
+                "exportName": "RxEyeOpen",
+                "name": "RxEyeOpen"
+            },
+            {
+                "filePath": "React-Icons\rx",
+                "exportName": "RxEyeClosed",
+                "name": "RxEyeClosed"
+            }
+        ]
+    }
+]  

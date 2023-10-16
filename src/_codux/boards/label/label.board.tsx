@@ -3,10 +3,6 @@ import { Label } from '../../../components/label/label';
 
 export default createBoard({
     name: 'Label',
-    Board: () => <Label className="label"></Label>,
+    Board: () => <Label>My Label</Label>,
     isSnippet: true,
-    environmentProps: {
-        canvasHeight: 5,
-        windowWidth: 1148,
-    },
 });

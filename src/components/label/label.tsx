@@ -13,8 +13,8 @@ export interface LabelProps {
  */
 export const Label = ({ className, children, htmlFor }: LabelProps) => {
     return (
-        <label htmlFor={htmlFor} className={classNames('label', styles.label)}>
-            {children}
-        </label>
+        <div className={classNames(styles.root, className)}>
+            <label htmlFor={htmlFor} className={styles.Label}> {children} </label>
+        </div>
     );
 };
