@@ -14,7 +14,7 @@ export interface InputProps {
 export const Input = ({ className, id, name }: InputProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <input className={styles.Input}></input>
+            <input className={styles.Input} placeholder="Email"></input>
         </div>
     );
 };

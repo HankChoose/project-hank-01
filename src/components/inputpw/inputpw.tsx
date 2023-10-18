@@ -1,6 +1,11 @@
 import classNames from 'classnames';
 import styles from './inputpw.module.scss';
 import React, { useState } from 'react';
+import { RxEyeOpen, RxEyeClosed } from 'react-icons/rx';
+
+export interface InputpwProps {
+    className?: string;
+}
 
 /**
  * This component was created using Codux's Default new component template.
@@ -20,9 +25,10 @@ export const Inputpw = ({ className }: InputpwProps) => {
                 value={password}
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
+                className={styles.Input}
             />
             <button onClick={togglePasswordVisibility} className={styles.Button}>
-                {showPassword ? <img src="./hide.png" alt="H" /> : <img src="./show.png" alt="S" />}
+                {showPassword ? <RxEyeClosed /> : <RxEyeOpen />}
             </button>
         </div>
     );

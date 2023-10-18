@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import styles from './App.module.scss';
 import { Label } from './components/label/label';
-import { Button } from './components/button/button';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { Link } from './components/link/link';
-import { Inputpw } from './components/inputpw/inputpw';
-import Input_module from './components/input/input.module.scss';
 import Classnames from 'classnames';
-import { Input } from './components/input/input';
-import { FromRow } from './components/from-row/from-row';
+import { FormCard } from './components/form-card/form-card';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -19,7 +14,6 @@ function App() {
     const [action, setAction] = useState('login');
     const csrfToken = Cookies.get('csrftoken'); // 获取 CSRF token
 
-    
     /*
     function handleOnSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -50,45 +44,7 @@ function App() {
         <div className={styles.App}>
             <h1>Sign in to Zhiyouyuec</h1>
             <form onSubmit={handleOnSubmit}>
-
-            <table width="200" border="0" align="center">
-                <tbody>
-                    <tr>
-                    <th scope="col" align="left"> <Label htmlFor={'email'}>Email</Label></th>
-                    <th align="right" scope="col"><FromRow>Need an account?</FromRow></th>
-                    <th align="right" scope="col"><FromRow><Link>Sign up</Link></FromRow></th>
-                    </tr>
-                    <tr>
-                    <th colspan="3" scope="row">
-                        <FromRow><Input className={Classnames(Input_module.input)} id={''} name={''} />
-                        </FromRow></th>
-                    </tr>
-                    <tr>
-                    <th colspan="3" scope="row">&nbsp;</th>
-                    </tr>
-                    <tr>
-                    <th scope="col" align="left"> <FromRow> <Label htmlFor={'password'}>Password</Label>
-                        </FromRow></th>
-                    <th align="right" scope="col"></th>
-                    <th align="right" scope="col"><FromRow><Link>Retrieve password</Link></FromRow></th>
-
-                    </tr>
-                    <tr>
-                    <th colspan="3" scope="row"> <Inputpw /></th>
-                    </tr>
-                    <tr>
-                    <th colspan="3" scope="row">&nbsp;</th>
-                    </tr>
-                    <tr>
-                    <th colspan="3" scope="row"><FromRow><Button>Sign in</Button></FromRow></th>
-                    </tr>
-                    <tr>
-                    <th colspan="3" scope="row">&nbsp;</th>
-                    </tr>
-                </tbody>
-                </table>
-     
-          
+                <FormCard></FormCard>
             </form>
         </div>
     );
