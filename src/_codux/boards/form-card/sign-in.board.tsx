@@ -3,9 +3,6 @@ import { FormCard } from '../../../components/form-card/form-card';
 
 export default createBoard({
     name: 'Sign-In',
-    Board: () => <FormCard></FormCard>,
+    Board: () => <FormCard />,
     isSnippet: true,
-    environmentProps: {
-        windowWidth: 1030,
-    },
 });

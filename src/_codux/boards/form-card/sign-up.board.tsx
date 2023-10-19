@@ -3,6 +3,6 @@ import { FormCard } from '../../../components/form-card/form-card';
 
 export default createBoard({
     name: 'Sign-Up',
-    Board: () => <FormCard />,
+    Board: () => <FormCard formType="signup" />,
     isSnippet: true,
 });
