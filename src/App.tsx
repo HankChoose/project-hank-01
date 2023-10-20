@@ -5,6 +5,8 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import Classnames from 'classnames';
 import { FormCard } from './components/form-card/form-card';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 
 function App() {
     const [count, setCount] = useState(0);
@@ -42,11 +44,29 @@ function App() {
     };
     return (
         <div className={styles.App}>
-            <h1>Sign in to Zhiyouyuec</h1>
-            <form onSubmit={handleOnSubmit}>
-                <FormCard></FormCard>
-            </form>
+           <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/signup">注册</Link>
+            </li>
+            <li>
+              <Link to="/signin">登录</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+			<Route path="/signup" element={<FormCard formType="signup" />} />
+			<Route path="/signin" element={<FormCard formType="signin" />} />
+        </Routes>
+      </div>
+    </Router>
+	
         </div>
+
+        
     );
 }
 

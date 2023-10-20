@@ -15,8 +15,7 @@ export const HankTest1 = ({ className }: HankTest1Props) => {
     return (
         <div className={classNames(styles.root, className)}>
             HankTest1
-            <Progress />
-            <Button />
+        
             <RxEyeOpen />
             <RxEyeClosed />
         </div>

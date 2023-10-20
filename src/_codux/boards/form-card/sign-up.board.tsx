@@ -5,4 +5,7 @@ export default createBoard({
     name: 'Sign-Up',
     Board: () => <FormCard formType="signup" />,
     isSnippet: true,
+    environmentProps: {
+        canvasHeight: 227,
+    },
 });

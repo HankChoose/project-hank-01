@@ -7,9 +7,8 @@ import { RxEyeOpen, RxEyeClosed } from 'react-icons/rx';
 import { Button } from '../button/button';
 import React from 'react';
 import { Elevation, H1, TextArea, Card, InputGroup } from '@blueprintjs/core';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
-//import Login from './Login';
 
 export interface FormCardProps {
     className?: string;
@@ -30,23 +29,7 @@ export const FormCard = ({ className, formType = 'signin', children }: FormCardP
 
     return (
         <div className={classNames(styles.root, className)}>
-            {' '}
-             <Router>
-                <div>
-                <nav>
-                    <ul>
-                    <li>
-                        <Link to="/login2">注册</Link>
-                    </li>
-                    <li>
-                        <Link to="/login">登录</Link>
-                    </li>
-                    </ul>
-                </nav>
 
-                
-                </div>
-            </Router>
             <H1>{formTitle}</H1>
             {children}
             <FormRow /> <FormRow />
