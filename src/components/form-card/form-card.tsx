@@ -6,9 +6,7 @@ import { Inputpw } from '../inputpw/inputpw';
 import { RxEyeOpen, RxEyeClosed } from 'react-icons/rx';
 import { Button } from '../button/button';
 import React from 'react';
-import { Elevation, H1, TextArea, Card, InputGroup } from '@blueprintjs/core';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
 
 export interface FormCardProps {
     className?: string;
@@ -29,15 +27,14 @@ export const FormCard = ({ className, formType = 'signin', children }: FormCardP
 
     return (
         <div className={classNames(styles.root, className)}>
-
-            <H1>{formTitle}</H1>
+          
             {children}
-            <FormRow /> <FormRow />
+            <FormRow />
             <FormRow children={<Input />} />
             <FormRow />
             <Inputpw />
             <FormRow />
-            <FormRow children={<Button>My Button</Button>} />
+            <FormRow children={<Button> {formTitle} </Button>} />
             <FormRow />
         </div>
     );
